@@ -9,7 +9,8 @@
    
 </head>
 <body>
-    <div class="container">
+    <div class="container"git status
+>
         <div class="todo-app">
             <h1>To-Do App</h1>
             <form class="input-area">
@@ -34,48 +35,6 @@
 
 
 </body>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const taskInput = document.getElementById ('task-input');
-    const addTaskBtn = document.getElementById('add-task-btn');
-    const taskList = document.getElementById ('task-list')
-    const emptyImage = document.querySelector('.empty-image');
-
-    const toggleEmptystate = () => {
-        emptyImage.style.display= taskList.children.length === 0 ? 'block' : 'none';
-    }
- 
-    
-    const addTask =(event) => {
-        event.preventDefault();
-        const taskText = taskInput.ariaValueMax.trim();
-        if(!taskText) {
-            return;
-        }
-
-        const li = document.createElement('li');
-        li.innerHTML= `
-        <input type="checkbox" class="checkbox">
-        <span>${taskText}</span>
-        `;
-
-       
-        taskList.appendChild(li);
-        taskInput.value = '';
-        toggleEmptystate();
-    }
-
-})
-
-addTaskBtn.addEventListener('click', addTask);
-taskInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter'){
-        addTask(e);
-    }
-})
-
-alert('hello');
-
-</script>
+<script src="todo.js"></script>
 
 </html>
