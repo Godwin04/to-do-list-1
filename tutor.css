@@ -43,6 +43,7 @@ nav a {
 .hero{
     background: url(sofa1.jpg);
     background-repeat: no-repeat;
+    background-position: fit;
     width: 100%;
     color: white;
     text-align: center;
