@@ -38,4 +38,3 @@ taskInput.addEventListener('keypress', (e) => {
     }
 })
 
-alert('hello');
