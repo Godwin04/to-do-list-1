@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="todo.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h1>To-Do App</h1>
+            <form class="input-area">
+                <input type="text" id="task-input" placeholder="Add a new task">
+                <button type="submit" id="add-task-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </form>
+            <div class="todos-container">
+                <ul id="task-list">
+                    <li>Css snippet</li>
+                </ul>
+               <!--<img class="empty-image" src="splash.avif" alt="empty">--> 
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const taskInput = document.getElementById ('task-input');
+    const addTaskBtn = document.getElementById('add-task-btn');
+    const taskList = document.getElementById ('task-list')
+    const emptyImage = document.querySelector('.empty-image');
+
+    const toggleEmptystate = () => {
+        emptyImage.style.display= taskList.children.length === 0 ? 'block' : 'none';
+    }
+ 
+    
+    const addTask =(event) => {
+        event.preventDefault();
+        const taskText = taskInput.ariaValueMax.trim();
+        if(!taskText) {
+            return;
+        }
+
+        const li = document.createElement('li');
+        li.innerHTML= `
+        <input type="checkbox" class="checkbox">
+        <span>${taskText}</span>
+        `;
+
+       
+        taskList.appendChild(li);
+        taskInput.value = '';
+        toggleEmptystate();
+    }
+
+})
+
+addTaskBtn.addEventListener('click', addTask);
+taskInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter'){
+        addTask(e);
+    }
+})
+
+alert('hello');
+
+</script>
+
+</html>
