@@ -39,9 +39,9 @@ nav a {
 }
 
 /*home/body*/
-
+ 
 .hero{
-    background: url(blue.jpg);
+    background: url(sofa1.jpg);
     background-repeat: no-repeat;
     width: 100%;
     color: white;
@@ -70,75 +70,85 @@ section{
 }
 
 .product img {
-    width: 60px;
     border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+img{
+    width: 100%;
+}
+
+.add-to-cart{
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:active{
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+/*form*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-info{
+    margin-top: 30px;
+}
+
+/*footer*/
+footer{
+    text-align: center;
+    padding: 20x;
+    background-color: #222;
+    color: #fff;
+}
+
+/*fonts*/
+i{
+    padding-right: 5px;
+}
+
+/*media query for smaller screen*/
+@media (max-width: 768px) {
+    .product-list{
+    flex-direction: column;
+    align-items: center;
+}
+    }
+   
+
+/*nav ul{
+    flex-direction: column;
+    align-items: center;
+}*/
+.hero{
+    padding: 60px 20px;
+}
+
+.product{
+    max-width: 100%;
+}
